@@ -137,7 +137,7 @@ class SubmitButtonWidget extends StatelessWidget {
               }
             }
             final alert = AlertDialog(
-              title: Text("Count: ${optionsControllers.length + 1}"),
+              title: Text("Total Field Count: ${optionsControllers.length + 1}"),
               content: Text(text.trim()),
               actions: [
                 TextButton(

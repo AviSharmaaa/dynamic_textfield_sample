@@ -1,8 +1,7 @@
-import 'package:dynamic_textfield_sample/dynamic_texfields.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'app_theme.dart';
+import 'dynamic_texfields.dart';
 
 void main() {
   runApp(const MyApp());
