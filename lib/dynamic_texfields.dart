@@ -137,7 +137,9 @@ class SubmitButtonWidget extends StatelessWidget {
               }
             }
             final alert = AlertDialog(
-              title: Text("Total Field Count: ${optionsControllers.length + 1}"),
+              title: Text(
+                "Total Field Count: ${optionsControllers.length + 1}",
+              ),
               content: Text(text.trim()),
               actions: [
                 TextButton(
@@ -154,7 +156,7 @@ class SubmitButtonWidget extends StatelessWidget {
             );
           },
           style: TextButton.styleFrom(
-            primary: Colors.white,
+            foregroundColor: Colors.white,
             backgroundColor: Colors.blue,
             textStyle:
                 const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -180,6 +182,7 @@ class SubmitButtonWidget extends StatelessWidget {
 class OptionTile extends StatelessWidget {
   final List<TextEditingController> controllers;
   final List<TextField> textFields;
+
   const OptionTile(
       {Key? key, required this.controllers, required this.textFields})
       : super(key: key);
@@ -211,10 +214,10 @@ class OptionTile extends StatelessWidget {
                 }
               : null,
           style: TextButton.styleFrom(
-            primary: Colors.white,
+            foregroundColor: Colors.white,
             backgroundColor:
                 (controllers.length < 3) ? Colors.blue : Colors.grey.shade400,
-            onSurface: Colors.black,
+            disabledForegroundColor: Colors.black.withOpacity(0.38),
             textStyle:
                 const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             shape: const BeveledRectangleBorder(
