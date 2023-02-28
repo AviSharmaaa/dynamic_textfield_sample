@@ -1,0 +1,33 @@
+name: Flutter Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+         flutter-version: "3.0.0"
+         channel: "stable"
+         cache: true
+
+      - name: Get packages
+        run: flutter pub get
+
+      - name: Analyze the code
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
