@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           title: 'Dynamic TextFields Sample',
           theme: AppTheme().buildTheme(),
           debugShowCheckedModeBanner: false,
-          home: DynamicTextFieldSample()),
+          home: const DynamicTextFieldSample()),
     );
   }
 }
