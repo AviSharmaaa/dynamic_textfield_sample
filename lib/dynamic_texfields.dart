@@ -67,7 +67,7 @@ class _DynamicTextFieldSampleState extends State<DynamicTextFieldSample> {
             },
           ),
           title: const Text('Sample Page'),
-          centerTitle: true,
+          centerTitle: false,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         ),
